@@ -7,4 +7,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+
+
+  # index for Event , show details about event
+  get "/weddings" => "events#index"
 end
