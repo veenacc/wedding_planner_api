@@ -1,6 +1,6 @@
 json.id event.id
 json.name event.name
-
+json.description event.description
 json.address event.address
 json.image_url event.image_url
 json.start_time event.start_time
