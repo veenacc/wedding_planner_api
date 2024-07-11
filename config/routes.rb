@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   get "/weddings" => "events#index"
   # show for Event , show details about one event
   get "/weddings/:id" => "events#show"
+  # update to store user_id /lead for a project
+  patch "/weddings/:id" => "events#update"
 
   #User
   # SignUp => create new user
