@@ -13,4 +13,9 @@ Rails.application.routes.draw do
   get "/weddings" => "events#index"
   # show for Event , show details about one event
   get "/weddings/:id" => "events#show"
+
+  #User
+  # SignUp => create new user
+  post "/users" => "users#create"
+
 end
