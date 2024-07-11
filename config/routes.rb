@@ -17,5 +17,7 @@ Rails.application.routes.draw do
   #User
   # SignUp => create new user
   post "/users" => "users#create"
+  # Login => user logs in and creates 'jwt' token in storage
+  post "/sessions" => "sessions#create"
 
 end

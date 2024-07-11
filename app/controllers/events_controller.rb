@@ -2,6 +2,7 @@ class EventsController < ApplicationController
 
   def index
     # render json: {message: "Hello from event index"}
+    p current_user
     @events = Event.all
     render :index
   end
