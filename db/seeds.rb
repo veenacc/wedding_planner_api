@@ -16,3 +16,6 @@
 
 # third=Event.create(name: "JoeAndJan", description: "joe weds jan",address: "seattle,USA", image_url: "https://
 # content.api.news/v3/images/bin/287141f386853951caaf9ac01a7683a0", start_time: '2024-12-20', end_time: '2024-12-21')
+
+# five=Event.create(name: "The Johns", description: "Ray weds sally",address: "Dallas,USA", image_url: "https://
+# content.api.news/v3/images/bin/287141f386853951caaf9ac01a7683a0", start_time: '2025-03-2', end_time: '2025-03-4')
