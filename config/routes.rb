@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   # update to store user_id /lead for a project
   patch "/weddings/:id" => "events#update"
   post "/weddings" => "events#create"
+  delete "/weddings/:id" => "events#destroy"
 
   #User
   # SignUp => create new user

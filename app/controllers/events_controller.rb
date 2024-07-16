@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
 
-  before_action :authenticate_admin, only: [:create]
-  # before_action :authenticate_admin, only: [:create, :destroy]
+  # before_action :authenticate_admin, only: [:create]
+  before_action :authenticate_admin, only: [:create, :destroy]
 
   def index
     # render json: {message: "Hello from event index"}
@@ -50,6 +50,12 @@ class EventsController < ApplicationController
       render json: {message: "not authorized"}
     end
     
+  end
+
+  def destroy
+    @event = Event.find_by(id: params[:id])
+    @event.destroy
+    render json: {message: "Deleted #{params[:id]}"}
   end
 
 end
