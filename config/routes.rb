@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get "/weddings/:id" => "events#show"
   # update to store user_id /lead for a project
   patch "/weddings/:id" => "events#update"
+  post "/weddings" => "events#create"
 
   #User
   # SignUp => create new user

@@ -12,6 +12,23 @@ class EventsController < ApplicationController
     render :show
   end
 
+  def create
+    @event = Event.new(name: params[:name], 
+              description: params[:description], 
+              address: params[:address], 
+              image_url: params[:image_url],
+              user_id: nil,
+              start_time: params[:start_time],
+              end_time: params[:end_time]
+    )
+    
+    if @event.save
+      render :show
+    else
+      render json: {error: @event.errors.full_messages}
+    end
+  end
+
   def update
     @event = Event.find_by(id: params[:id])
     if current_user
