@@ -1,5 +1,8 @@
 class EventsController < ApplicationController
 
+  before_action :authenticate_admin, only: [:create]
+  # before_action :authenticate_admin, only: [:create, :destroy]
+
   def index
     # render json: {message: "Hello from event index"}
     # p current_user
