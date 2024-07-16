@@ -23,5 +23,6 @@ Rails.application.routes.draw do
   post "/users" => "users#create"
   # Login => user logs in and creates 'jwt' token in storage
   post "/sessions" => "sessions#create"
+  get "/mypage" => "events#myIndex"
 
 end

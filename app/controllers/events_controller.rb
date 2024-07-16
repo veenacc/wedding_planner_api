@@ -58,4 +58,11 @@ class EventsController < ApplicationController
     render json: {message: "Deleted #{params[:id]}"}
   end
 
+  def myIndex
+    # render json: {message: "Hello from event index"}
+    # p current_user
+    @events = Event.where(user_id: current_user.id)
+    render :index
+  end
+
 end
