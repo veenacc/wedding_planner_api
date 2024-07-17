@@ -65,7 +65,7 @@ class EventsController < ApplicationController
       @events = Event.where(user_id: current_user.id)
       render :index
     else
-      render json: {message: "not available, You are not logged in"}
+      render json: []
     end
   end
 
