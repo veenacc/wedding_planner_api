@@ -61,8 +61,12 @@ class EventsController < ApplicationController
   def myIndex
     # render json: {message: "Hello from event index"}
     # p current_user
-    @events = Event.where(user_id: current_user.id)
-    render :index
+    if current_user
+      @events = Event.where(user_id: current_user.id)
+      render :index
+    else
+      render json: {message: "not available, You are not logged in"}
+    end
   end
 
 end
